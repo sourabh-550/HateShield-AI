@@ -95,8 +95,8 @@ class HinglishPreprocessor:
             # Convert emoji to text description
             # 😂 → ":face_with_tears_of_joy:"
             # Why? BERT tokenizer will at least see meaningful tokens
-            return emoji.demojize(text, delimiters=(' ', ' '))
-
+            return emoji.demojize(text)  # gives :face_with_tears_of_joy:
+        
     def _normalize_repeated_chars(self, text: str) -> str:
         # "sooooo good" → "soo good" (keep 2 for emphasis signal)
         return self._repeated_char_pattern.sub(r'\1\1', text)
