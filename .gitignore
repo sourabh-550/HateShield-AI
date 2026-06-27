@@ -19,9 +19,8 @@ models/
 *.bin
 *.pkl
 
-# Jupyter
+# Jupyter — only ignore checkpoints, NOT notebooks
 .ipynb_checkpoints/
-*.ipynb
 
 # OS
 .DS_Store
@@ -30,4 +29,3 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
-EOF
