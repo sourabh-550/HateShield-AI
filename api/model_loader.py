@@ -9,6 +9,15 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from loguru import logger
 from functools import lru_cache
+import pickle
+from sklearn.pipeline import Pipeline
+
+class ModelLoader:
+    def __init__(self):
+        self._muril_model    = None
+        self._muril_tokenizer= None
+        self._tfidf_pipeline = None
+        self._device         = None
 
 
 HF_REPO    = "sourabh5500/hate-speech-muril"
@@ -52,7 +61,8 @@ class ModelLoader:
 
         logger.info("✅ Model loaded successfully")
 
-    def predict(self, texts: list[str], threshold: float = 0.5) -> list[dict]:
+    # Change this line
+    def predict(self, texts: list[str], threshold: float = 0.45) -> list[dict]:
         """
         Run inference on a list of texts.
         Returns list of prediction dicts.
