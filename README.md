@@ -89,6 +89,16 @@ Confidence-based Routing System
 | < 0.60 | 56-66% | 🔴 Human Review |
 
 ---
+# Data
+
+## Dataset Sources
+
+### 1. Main Dataset (Hinglish Hate Speech)
+- **Source**: Kaggle
+- **Link**: https://www.kaggle.com/datasets/sharduldhekane/code-mixed-hinglish-hate-speech-detection-dataset
+- **File**: `combined_hate_speech_dataset.csv`
+- **Size**: 29,550 samples
+
 
 ## 🚀 Quick Start
 
